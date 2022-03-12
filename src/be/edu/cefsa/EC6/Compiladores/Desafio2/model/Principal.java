@@ -34,7 +34,9 @@ public class Principal {
 				if (validaLinha(linha))
 					escreveArquivo.write(linha+" - OK\n");
 				else
-					escreveArquivo.write(linha+" - Inválido\n");			
+					escreveArquivo.write(linha+" - Inválido\n");	
+				
+				escreveArquivo.flush();
 				
 			}
 			fr.close();
