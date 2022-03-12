@@ -2,8 +2,6 @@ package be.edu.cefsa.EC6.Compiladores.Desafio2.model;
 
 import java.io.BufferedWriter;
 import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.nio.charset.StandardCharsets;
@@ -31,6 +29,7 @@ public class Principal {
 			
 			while ((linha = dadosLidos.readLine()) != null) 
 			{
+				linha = linha.replaceAll(" ", "");
 				if (validaLinha(linha))
 					escreveArquivo.write(linha+" - OK\n");
 				else
